@@ -1,0 +1,82 @@
+<head>
+    <style>
+        body {
+            -user-select: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+        }
+        textarea:focus {
+        outline: none;
+        border-style: dashed;
+        padding: 20px;
+        }
+        .formatting{
+            font-family: Arial;
+            letter-spacing: 4px;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            width: 600px;
+            margin: auto;
+            padding-top: 130px;
+        }
+        .row {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        .col {
+            flex: 1;
+        }
+        .mdText {
+            width: 400px;
+            overflow: scroll;
+            border: 1px solid black;
+            padding: 20px;
+        }
+        textarea {
+            resize: none;
+            height: 300px;
+            width: 200px;
+            letter-spacing: 2px;
+            padding: 20px;
+        }
+        #footer {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            font-size: 12px;
+        }
+        a, a:visited, a:hover, a:active {
+            color: black;
+            letter-spacing: 4px;
+            margin-top: 20px;
+        }
+        
+    </style>
+    <script>
+        function focbox() {
+            document.getElementById('textinput').focus();
+        }
+    </script>
+</head> 
+<body onkeypress = 'focbox();' spellcheck="false">
+    <div id="root" class="formatting"></div>
+    <div id="footer" class="formatting"> based on example <a href="https://facebook.github.io/react/">here</a></div>
+
+    <script src="https://fb.me/react-15.0.1.js"></script>
+    <script src="https://fb.me/react-dom-15.0.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
+    <script src="md-edit.js" type="text/babel"></script>
+    <script src="
+https://cdnjs.cloudflare.com/ajax/libs/marked/0.3.6/marked.js"></script>
+</body>
+
+<!--
+    With help from:
+    https://gist.github.com/danawoodman/9cfddb1a0c934a35f31a
+    and especially based on:
+    <https://facebook.github.io/react/>
+-->
